@@ -30,7 +30,6 @@ class MyHomePage extends StatefulWidget {
     "Bubble Sort",
     "Selection Sort",
     "Insertion Sort",
-    "Quick Sort"
   ];
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -130,6 +129,35 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       isSorting = false;
     });
+  }
+
+  void partition(arr, low, high) {
+    var temp;
+    var pivot = arr[high];
+
+    // index of smaller element
+    var i = (low - 1);
+    for (var j = low; j <= high - 1; j++) {
+      // If current element is smaller
+      // than or equal to pivot
+      if (arr[j] <= pivot) {
+        i++;
+
+        // swap arr[i] and arr[j]
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+
+    // swap arr[i+1] and arr[high]
+    // (or pivot)
+
+    temp = arr[i + 1];
+    arr[i + 1] = arr[high];
+    arr[high] = temp;
+
+    return i + 1;
   }
 
   void setList() {
@@ -265,6 +293,11 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
+          TextButton(
+              onPressed: () {
+                launch("https://github.com/Boubourazi/sort_app");
+              },
+              child: Text("Check source code here "))
         ],
       ),
       floatingActionButton: FloatingActionButton(
