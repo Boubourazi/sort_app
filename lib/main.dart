@@ -265,7 +265,7 @@ class _MyHomePageState extends State<MyHomePage> {
           TextButton(
             onPressed: sortFunctions[widget.sortList.indexOf(_selectedValue)],
             child: Text(
-              "Start sort !",
+              "Start sort ! Live demo",
               style: TextStyle(fontSize: 20),
             ),
           ),
