@@ -285,7 +285,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     launch("http://www.linkedin.com/in/aurelienllorca");
                   },
                   icon: Image.asset(
-                    "linkedInLogo.png",
+                    "assets/linkedInLogo.png",
                     width: 50,
                     height: 50,
                   ),
