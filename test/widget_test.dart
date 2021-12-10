@@ -16,7 +16,7 @@ void main() {
     await tester.pumpWidget(MyApp());
 
     // Verify that our counter starts at 0.
-    expect(find.text('sort'), findsOneWidget);
+    expect(find.text('Sort demo'), findsOneWidget);
     expect(find.text('qsfqsfqsfqs'), findsNothing);
 
     // Tap the '+' icon and trigger a frame.
