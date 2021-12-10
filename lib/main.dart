@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Sort demo test'),
+      home: MyHomePage(title: 'Demonstration live'),
     );
   }
 }
